@@ -1,16 +1,24 @@
-# React + Vite
+# 💸 멍청비용 가계부 
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+오늘의 '멍청비용'을 기록하고 시각적으로 표현하는 가계부 웹 애플리케이션입니다.  
+예를 들어 "우산을 잃어버려 새로 샀다"와 같은 소비를 등록하면,  
+해당 항목의 이모지가 날아가며 가계부에 기록됩니다.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 📌 주요 기능
 
-## React Compiler
+- **멍청비용 추가**: 날짜, 항목, 금액, 사유 입력 가능  
+- **이모지 애니메이션**: 항목에 따라 자동으로 관련 이모지가 날아가는 효과  
+- **AI 연동**: 입력된 소비 내용에 따라 적절한 이모지를 자동 추천  
+- **가계부 기록 관리**: 일별 또는 항목별로 멍청비용 내역을 한눈에 확인  
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 🛠 기술 스택
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **Frontend**: React 
+- **API**: EmojiNet
+  
+---
+
