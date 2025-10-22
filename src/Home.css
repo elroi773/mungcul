@@ -1,0 +1,88 @@
+/* 홈 화면만 영향을 받도록 .home-root로 스코프 고정 */
+.home-root {
+    margin: 0;
+    padding: 0;
+    background-image: url("./img/index_Background.png");
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    overflow: hidden;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* 전역이던 .container도 홈 내부로 한정 */
+  .home-root .container {
+    position: relative;
+    width: 1280px;
+    height: 832px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  /* ===== 이미지 위치 및 애니메이션 ===== */
+  .home-root .text {
+    width: 630px;
+    animation: popText 0.8s ease-out 0.3s forwards;
+    opacity: 0;
+    position: relative;
+    top: 80px;
+  }
+  
+  .home-root .dogfoot {
+    width: 300px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    animation: popDog 0.8s ease-out 1.2s forwards;
+    opacity: 0;
+  }
+  
+  /* ===== 버튼 스타일도 홈 범위로 한정 ===== */
+  .home-root button {
+    font-family: 'Giants';
+    width: 400px;
+    height: 70px;
+    border: none;
+    cursor: pointer;
+    font-size: 30px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  
+  .home-root .login {
+    background-color: #5c4a3d;
+    color: white;
+    padding: 12px 50px;
+    border-radius: 30px;
+    margin-top: 250px;
+  }
+  
+  .home-root .join {
+    background-color: white;
+    color: #5c4a3d;
+    border: 2px solid #5c4a3d;
+    padding: 12px 50px;
+    border-radius: 30px;
+    margin-top: 15px;
+  }
+  
+  .home-root button:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 5px 10px rgba(0,0,0,0.2);
+  }
+  
+  /* ===== 애니메이션 ===== */
+  @keyframes popText {
+    0% { transform: scale(0.5); opacity: 0; }
+    60% { transform: scale(1.1); opacity: 1; }
+    100% { transform: scale(1); opacity: 1; }
+  }
+  
+  @keyframes popDog {
+    0% { transform: scale(0.5) rotate(-20deg); opacity: 0; }
+    60% { transform: scale(1.1) rotate(10deg); opacity: 1; }
+    100% { transform: scale(1) rotate(0deg); opacity: 1; }
+  }
+  
