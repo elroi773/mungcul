@@ -1,16 +1,20 @@
-import './App.css'
-import Text from "./img/h1.png"
-import DogFoot from "./img/dogfoot.png"
+// src/App.jsx
+import './App.css';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Home from "./Home";
+import Login from "./Login";
+import Join from "./Join";
 
 function App() {
   return (
-    <div className="container">
-      <img src={DogFoot} alt="dogfoot" className="dogfoot" />
-      <img src={Text} alt="text" className="text" />
-      <button className="login">로그인</button>
-      <button className="join">회원가입</button>
-    </div>
-  )
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home/>} />
+        <Route path="/login" element={<Login/>} />
+        <Route path="/join" element={<Join/>} />
+      </Routes>
+    </Router>
+  );
 }
 
-export default App
+export default App;
